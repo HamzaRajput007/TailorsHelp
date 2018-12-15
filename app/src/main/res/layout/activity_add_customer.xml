@@ -1,0 +1,397 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddCustomer"
+    tools:showIn="@layout/activity_add_customer"
+    android:scrollbarThumbVertical="@layout/activity_add_customer"
+    tools:ignore="ResourceCycle">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height= "wrap_content"
+        android:id="@+id/TopTextLayoutId"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="20dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ADD CUSTOMER"
+            android:textStyle="bold"
+            android:textSize="30dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerHorizontal="true"
+            />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ADD"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="20dp"
+            android:id="@+id/AddBtnId"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/customerLayoutID"
+        android:layout_below="@+id/TopTextLayoutId"
+        android:paddingTop="10dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/NameLayoutId"
+            android:paddingBottom="10dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Name :"
+                android:textSize="20dp"
+                android:layout_alignParentLeft="true"
+                android:textStyle="bold"/>
+
+            <EditText
+                android:layout_width="230dp"
+                android:id="@+id/NameTvId"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"/>
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/IdAndPhoneLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/NameLayoutId">
+
+            <RelativeLayout
+                android:id="@+id/IdLayoutId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="10dp">
+
+                <TextView
+                    android:id="@+id/TextIdId"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginRight="5dp"
+                    android:text="ID : "
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/IdTvId"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/TextIdId"
+                    android:inputType="number" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/PhoneLayoutId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/IdLayoutId"
+                android:paddingBottom="10dp">
+
+                <TextView
+                    android:id="@+id/TextPhoneId"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginRight="5dp"
+                    android:text="Phone : "
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/PhoneTvId"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/TextPhoneId" />
+
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_below="@+id/IdAndPhoneLayout"
+            android:id="@+id/LambaiAndBazuLayout"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/LambaiLayoutId"
+                android:paddingBottom="10dp"
+
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:layout_height="wrap_content"
+                    android:text="Lambai : "
+                    android:id="@+id/TextLambaiId"
+                    android:textSize="20dp"
+                    android:layout_alignParentLeft="true"
+                    android:textStyle="bold"/>
+
+                <EditText
+                    android:layout_width="100dp"
+                    android:id="@+id/LambaiTvId"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/TextLambaiId"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/LambaiLayoutId"
+                android:id="@+id/BazuLayoutId"
+                android:paddingBottom="10dp"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Bazu : "
+                    android:textSize="20dp"
+                    android:layout_marginRight="5dp"
+                    android:id="@+id/TextBazuId"
+                    android:layout_alignParentLeft="true"
+                    android:textStyle="bold"/>
+
+                <EditText
+                    android:layout_width="100dp"
+                    android:id="@+id/BazuTvId"
+                    android:layout_toRightOf="@+id/TextBazuId"
+                    android:layout_height="wrap_content"
+                    />
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/TeeraAndChatiLayout"
+            android:layout_below="@+id/LambaiAndBazuLayout">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/TeeraLayoutId"
+                android:paddingBottom="10dp"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/TextTeeraId"
+                    android:text="Teera : "
+                    android:textSize="20dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_alignParentLeft="true"
+                    android:textStyle="bold"/>
+
+                <EditText
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/TeeraTvId"
+                    android:layout_toRightOf="@+id/TextTeeraId"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/TeeraLayoutId"
+                android:id="@+id/ChatiLayoutId"
+                android:paddingBottom="10dp"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:id="@+id/TextChatiId"
+                    android:layout_height="wrap_content"
+                    android:text="Chati : "
+                    android:textSize="20dp"
+
+                    android:layout_alignParentLeft="true"
+                    android:textStyle="bold"/>
+
+                <EditText
+                    android:layout_width="100dp"
+                    android:id="@+id/ChatiTvId"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/TextChatiId"/>
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/GhairaAndGalaLayout"
+            android:layout_below="@id/TeeraAndChatiLayout">
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/GhairaLayoutId"
+                android:paddingBottom="10dp"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/TextGhairaId"
+                    android:text="Ghaira : "
+                    android:textSize="20dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_alignParentLeft="true"
+                    android:textStyle="bold"/>
+
+                <EditText
+                    android:layout_width="100dp"
+                    android:id="@+id/GhairaTvId"
+                    android:layout_height="wrap_content"
+                    android:maxLength="6"
+                    android:layout_toRightOf="@+id/TextGhairaId"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/GhairaLayoutId"
+                android:id="@+id/GalaLayoutId"
+                android:paddingBottom="10dp"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/TextGalaId"
+                    android:text="Gala : "
+                    android:layout_marginRight="5dp"
+                    android:textSize="20dp"
+                    android:layout_alignParentLeft="true"
+                    android:textStyle="bold"/>
+
+                <EditText
+                    android:id="@+id/GalaTvId"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/TextGalaId"/>
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/ShalwarAndPanchaLayout"
+            android:layout_below="@+id/GhairaAndGalaLayout">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/ShalwarLayoutId"
+                android:paddingBottom="10dp"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Shalwar : "
+                    android:id="@+id/TextShalwarId"
+                    android:textSize="20dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_alignParentLeft="true"
+                    android:textStyle="bold"/>
+
+                <EditText
+                    android:layout_width="100dp"
+                    android:id="@+id/ShalwarTvId"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/TextShalwarId"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/ShalwarLayoutId"
+                android:id="@+id/PanchaLayoutId"
+                android:paddingBottom="10dp"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/TextPanchaId"
+                    android:text="Pancha : "
+                    android:textSize="20dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_alignParentLeft="true"
+                    android:textStyle="bold"/>
+
+                <EditText
+                    android:layout_width="100dp"
+                    android:id="@+id/PanchaTvId"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/TextPanchaId"/>
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/KafAndKandhaLayout"
+            android:layout_below="@+id/ShalwarAndPanchaLayout">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/KafLayoutId"
+                android:paddingBottom="10dp"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/TextKafId"
+                    android:text="Kaf : "
+                    android:textSize="20dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_alignParentLeft="true"
+                    android:textStyle="bold"/>
+
+                <EditText
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/KafTvId"
+                    android:layout_toRightOf="@+id/TextKafId"
+                    />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/KafLayoutId"
+                android:paddingBottom="10dp"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/TextKandhaId"
+                    android:text="Kandha : "
+                    android:textSize="20dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_alignParentLeft="true"
+                    android:textStyle="bold"/>
+
+                <EditText
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/KandhaTvId"
+                    android:layout_toRightOf="@+id/TextKandhaId"
+                   />
+            </RelativeLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>
