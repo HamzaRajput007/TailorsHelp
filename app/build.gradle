@@ -4,6 +4,7 @@ android {
     compileSdkVersion 26
     defaultConfig {
         applicationId "com.example.m.a1stonnewandroid"
+        buildToolsVersion "27.0.3"
         minSdkVersion 15
         targetSdkVersion 26
         versionCode 1
@@ -16,6 +17,7 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+    buildToolsVersion '27.0.3'
 }
 
 dependencies {

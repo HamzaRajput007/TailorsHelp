@@ -7,10 +7,20 @@
     tools:context=".MainActivity">
 
 
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:id="@+id/toolBarId"
+        android:background="@color/colorPrimaryDark"
+        app:title="Tailor"
+        app:titleTextColor="#ffffff">
+
+    </android.support.v7.widget.Toolbar>
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="70dp"
-        android:id="@+id/searchBoxLayoutID">
+        android:id="@+id/searchBoxLayoutID"
+        android:layout_below="@+id/toolBarId">
 
         <Button
             android:id="@+id/SearchBtn"

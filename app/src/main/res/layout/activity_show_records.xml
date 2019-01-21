@@ -4,9 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AddCustomer"
-    tools:showIn="@layout/activity_add_customer"
-    android:scrollbarThumbVertical="@layout/activity_add_customer"
+    tools:context=".ShowRecords"
+    tools:showIn="@layout/activity_show_records"
+    android:scrollbarThumbVertical="@layout/activity_show_records"
     tools:ignore="ResourceCycle">
 
     <RelativeLayout
@@ -18,7 +18,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="ADD CUSTOMER"
+            android:text=""
             android:textStyle="bold"
             android:textSize="30dp"
             android:layout_alignParentLeft="true"
@@ -27,10 +27,10 @@
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Save"
+            android:text="Edit"
             android:layout_alignParentRight="true"
             android:layout_marginRight="20dp"
-            android:id="@+id/AddBtnId"/>
+            android:id="@+id/EditBtnId"/>
     </RelativeLayout>
 
     <RelativeLayout
@@ -41,11 +41,36 @@
         android:paddingTop="10dp"
         android:paddingLeft="20dp"
         android:paddingRight="20dp">
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/IdLayout"
+            android:paddingBottom="10dp"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/TextIDId"
+                android:text="ID : "
+                android:textSize="20dp"
+                android:layout_marginRight="5dp"
+                android:layout_alignParentLeft="true"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:id="@+id/IDTvId"
+                android:layout_toRightOf="@+id/TextIDId"
+                />
+        </RelativeLayout>
 
         <RelativeLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/NameLayoutId"
+            android:layout_below="@+id/IdLayout"
             android:paddingBottom="10dp">
             <TextView
                 android:layout_width="wrap_content"
@@ -55,9 +80,9 @@
                 android:layout_alignParentLeft="true"
                 android:textStyle="bold"/>
 
-            <EditText
+            <TextView
                 android:layout_width="230dp"
-                android:id="@+id/NameTvId"
+                android:id="@+id/SNameTvId"
                 android:layout_height="wrap_content"
                 android:layout_alignParentRight="true"/>
         </RelativeLayout>
@@ -85,8 +110,8 @@
                     android:textSize="20dp"
                     android:textStyle="bold" />
 
-                <EditText
-                    android:id="@+id/PhoneTvId"
+                <TextView
+                    android:id="@+id/SPhoneTvId"
                     android:inputType="number"
                     android:layout_width="200dp"
                     android:layout_height="wrap_content"
@@ -118,10 +143,10 @@
                     android:layout_alignParentLeft="true"
                     android:textStyle="bold"/>
 
-                <EditText
+                <TextView
                     android:layout_width="100dp"
                     android:inputType="number"
-                    android:id="@+id/LambaiTvId"
+                    android:id="@+id/SLambaiTvId"
                     android:layout_height="wrap_content"
                     android:layout_toRightOf="@+id/TextLambaiId"/>
             </RelativeLayout>
@@ -143,10 +168,10 @@
                     android:layout_alignParentLeft="true"
                     android:textStyle="bold"/>
 
-                <EditText
+                <TextView
                     android:layout_width="100dp"
                     android:inputType="number"
-                    android:id="@+id/BazuTvId"
+                    android:id="@+id/SBazuTvId"
                     android:layout_toRightOf="@+id/TextBazuId"
                     android:layout_height="wrap_content"
                     />
@@ -175,11 +200,11 @@
                     android:layout_alignParentLeft="true"
                     android:textStyle="bold"/>
 
-                <EditText
+                <TextView
                     android:layout_width="100dp"
                     android:layout_height="wrap_content"
                     android:inputType="number"
-                    android:id="@+id/TeeraTvId"
+                    android:id="@+id/STeeraTvId"
                     android:layout_toRightOf="@+id/TextTeeraId"/>
             </RelativeLayout>
 
@@ -201,10 +226,10 @@
                     android:layout_alignParentLeft="true"
                     android:textStyle="bold"/>
 
-                <EditText
+                <TextView
                     android:layout_width="100dp"
                     android:inputType="number"
-                    android:id="@+id/ChatiTvId"
+                    android:id="@+id/SChatiTvId"
                     android:layout_height="wrap_content"
                     android:layout_toRightOf="@+id/TextChatiId"/>
             </RelativeLayout>
@@ -231,9 +256,9 @@
                     android:layout_alignParentLeft="true"
                     android:textStyle="bold"/>
 
-                <EditText
+                <TextView
                     android:layout_width="100dp"
-                    android:id="@+id/GhairaTvId"
+                    android:id="@+id/SGhairaTvId"
                     android:layout_height="wrap_content"
                     android:maxLength="6"
                     android:inputType="number"
@@ -257,8 +282,8 @@
                     android:layout_alignParentLeft="true"
                     android:textStyle="bold"/>
 
-                <EditText
-                    android:id="@+id/GalaTvId"
+                <TextView
+                    android:id="@+id/SGalaTvId"
                     android:layout_width="100dp"
                     android:inputType="number"
                     android:layout_height="wrap_content"
@@ -288,10 +313,10 @@
                     android:layout_alignParentLeft="true"
                     android:textStyle="bold"/>
 
-                <EditText
+                <TextView
                     android:layout_width="100dp"
                     android:inputType="number"
-                    android:id="@+id/ShalwarTvId"
+                    android:id="@+id/SShalwarTvId"
                     android:layout_height="wrap_content"
                     android:layout_toRightOf="@+id/TextShalwarId"/>
             </RelativeLayout>
@@ -313,9 +338,9 @@
                     android:layout_alignParentLeft="true"
                     android:textStyle="bold"/>
 
-                <EditText
+                <TextView
                     android:layout_width="100dp"
-                    android:id="@+id/PanchaTvId"
+                    android:id="@+id/SPanchaTvId"
                     android:inputType="number"
                     android:layout_height="wrap_content"
                     android:layout_toRightOf="@+id/TextPanchaId"/>
@@ -344,11 +369,11 @@
                     android:layout_alignParentLeft="true"
                     android:textStyle="bold"/>
 
-                <EditText
+                <TextView
                     android:layout_width="100dp"
                     android:layout_height="wrap_content"
                     android:inputType="number"
-                    android:id="@+id/KafTvId"
+                    android:id="@+id/SKafTvId"
                     android:layout_toRightOf="@+id/TextKafId"
                     />
             </RelativeLayout>
@@ -370,38 +395,15 @@
                     android:layout_alignParentLeft="true"
                     android:textStyle="bold"/>
 
-                <EditText
-                    android:layout_width="100dp"
-                    android:layout_height="wrap_content"
-                    android:inputType="number"
-                    android:id="@+id/KandhaTvId"
-                    android:layout_toRightOf="@+id/TextKandhaId"
-                   />
-            </RelativeLayout>
-            <RelativeLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/kandhaId"
-                android:paddingBottom="10dp"
-                >
                 <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/TextIDId"
-                    android:text="Kandha : "
-                    android:textSize="20dp"
-                    android:layout_marginRight="5dp"
-                    android:layout_alignParentLeft="true"
-                    android:textStyle="bold"/>
-
-                <EditText
                     android:layout_width="100dp"
                     android:layout_height="wrap_content"
                     android:inputType="number"
-                    android:id="@+id/IDTvId"
-                    android:layout_toRightOf="@+id/TextIDId"
+                    android:id="@+id/SKandhaTvId"
+                    android:layout_toRightOf="@+id/TextKandhaId"
                     />
             </RelativeLayout>
+
         </RelativeLayout>
     </RelativeLayout>
 
